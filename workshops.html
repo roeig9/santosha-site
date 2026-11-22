@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>סדנאות יוגה איינגר לקבוצות ולארגונים | סנטושה</title>
+<meta name="description" content="סדנאות יוגה בשיטת איינגר בקיבוץ דורות: גב תחתון, צוואר וכתפיים והיכרות עם השיטה. וגם סדנאות לקהילות, לקיבוצים ולמקומות עבודה בשער הנגב.">
+<link rel="canonical" href="https://santosha-iyengar-yoga.netlify.app/workshops.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="סנטושה">
+<meta property="og:url" content="https://santosha-iyengar-yoga.netlify.app/workshops.html">
+<meta property="og:title" content="סדנאות יוגה איינגר לקבוצות ולארגונים | סנטושה">
+<meta property="og:description" content="סדנאות יוגה בשיטת איינגר בקיבוץ דורות: גב תחתון, צוואר וכתפיים והיכרות עם השיטה. וגם סדנאות לקהילות, לקיבוצים ולמקומות עבודה בשער הנגב.">
+<meta property="og:image" content="https://santosha-iyengar-yoga.netlify.app/img/og-santosha.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/santosha-sun.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Assistant:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="img/santosha-sun.png" alt="">סנטושה</a>
+    <nav class="nav" aria-label="ניווט ראשי"><a href="index.html">בית</a><a href="classes.html">שיעורים והשיטה</a><a href="private.html">יוגה טיפולית ופרטית</a><a href="workshops.html">סדנאות ואירועים</a><a href="contact.html">צרו קשר</a></nav>
+    <a class="btn" href="contact.html">לשיעור ניסיון</a>
+  </div>
+</header>
+<main>
+<section class="pagehead"><div class="wrap"><img src="img/santosha-sun.png" alt=""><div><h1>סדנאות ואירועים</h1><p>סדנאות להעמקה בתרגול, וסדנאות לקבוצות, לקהילות ולמקומות עבודה.</p></div></div></section>
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">בקרוב</p>
+    <h2>סדנאות פתוחות להרשמה</h2>
+    <div class="events" id="events"></div>
+  </div>
+</section>
+<section class="band alt">
+  <div class="wrap">
+    <p class="eyebrow">נושאים</p>
+    <h2>סדנאות נושא</h2>
+    <div class="grid3">
+      <div class="card"><h3>גב תחתון</h3><p>להבין מה מעמיס על הגב, ולצאת עם כמה תנוחות פשוטות לשחרור ולחיזוק.</p></div>
+      <div class="card"><h3>צוואר וכתפיים</h3><p>למי שיושב שעות מול מחשב: לפתוח את החזה, לשחרר את הכתפיים ולשבת נכון.</p></div>
+      <div class="card"><h3>היכרות עם השיטה</h3><p>מפגש למי שמעולם לא תרגל איינגר: מה מיוחד בשיטה, ואיך עובדים עם האביזרים.</p></div>
+    </div>
+  </div>
+</section>
+<section class="band" id="register">
+  <div class="wrap grid2" style="align-items:start">
+    <div class="prose">
+      <p class="eyebrow">הרשמה</p>
+      <h2>להרשמה לסדנה</h2>
+      <p>בחרו סדנה והשאירו פרטים. רותם תחזור אליכם לאישור ולתשלום. אם אין כרגע סדנה פתוחה, השאירו פרטים ותקבלו עדכון על הבאה.</p>
+    </div>
+    <div class="formbox">
+      <form data-form="workshop" data-done="doneW" novalidate>
+        <div class="row">
+  <div class="field"><label for="wName">שם מלא</label><input id="wName" name="fullName" type="text" autocomplete="name" required></div>
+  <div class="field"><label for="wPhone">טלפון נייד</label><input id="wPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="050-0000000" required></div>
+</div>
+        <div class="field"><label for="eventPick">סדנה</label><select id="eventPick" name="eventPick"><option value="">עדכנו אותי על הסדנה הבאה</option></select></div>
+        <div class="field"><label for="wRemarks">הערות <span class="opt">(לא חובה)</span></label><textarea id="wRemarks" name="remarks"></textarea></div>
+        <label class="consent" for="wConsent"><input id="wConsent" name="consent" type="checkbox" required>אני מאשר/ת שרותם תיצור איתי קשר בטלפון או בווטסאפ.</label>
+        <p class="err" role="alert" hidden></p>
+        <button class="btn submit" type="submit">שליחה</button>
+      </form>
+      <div class="done" id="doneW" hidden><img src="img/santosha-sun.png" alt=""><h3>תודה!</h3><p>קיבלנו את הפרטים. רותם תחזור אליכם בהקדם.</p><p>לשאלות בינתיים: <span class="ltr">052-4766124</span></p></div>
+    </div>
+  </div>
+</section>
+<section class="band alt" id="groups">
+  <div class="wrap grid2" style="align-items:start">
+    <div class="prose">
+      <p class="eyebrow">לקבוצות וארגונים</p>
+      <h2>סדנה אצלכם</h2>
+      <p>רותם מגיעה עם האביזרים ומעבירה שיעור או סדרת מפגשים, מותאמים לקבוצה:</p>
+      <ul class="ticks">
+        <li>קהילות וקיבוצים, כולל קבוצות ותיקים ויוגה על כיסא</li>
+        <li>מקומות עבודה: יום בריאות, או סדנת גב וצוואר לעובדים</li>
+        <li>צוותי חינוך ורשויות מקומיות</li>
+      </ul>
+      <p>אפשר שיעור אחד, סדנה של שעתיים או סדרה של כמה מפגשים.</p>
+    </div>
+    <div class="formbox">
+      <form data-form="org" data-done="doneO" novalidate>
+        <div class="row">
+  <div class="field"><label for="oName">שם מלא</label><input id="oName" name="fullName" type="text" autocomplete="name" required></div>
+  <div class="field"><label for="oPhone">טלפון נייד</label><input id="oPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="050-0000000" required></div>
+</div>
+        <div class="row">
+          <div class="field"><label for="org">שם הארגון או הקהילה</label><input id="org" name="org" type="text"></div>
+          <div class="field"><label for="size">גודל הקבוצה בערך</label><input id="size" name="size" type="number" min="1" inputmode="numeric"></div>
+        </div>
+        <div class="field"><label for="oRemarks">מה תרצו? <span class="opt">(תאריכים, נושא, מקום)</span></label><textarea id="oRemarks" name="remarks"></textarea></div>
+        <label class="consent" for="oConsent"><input id="oConsent" name="consent" type="checkbox" required>אני מאשר/ת שרותם תיצור איתי קשר בטלפון או בווטסאפ.</label>
+        <p class="err" role="alert" hidden></p>
+        <button class="btn submit" type="submit">לקבלת הצעה</button>
+      </form>
+      <div class="done" id="doneO" hidden><img src="img/santosha-sun.png" alt=""><h3>תודה!</h3><p>קיבלנו את הפנייה. רותם תחזור אליכם עם הצעה.</p><p>לשאלות בינתיים: <span class="ltr">052-4766124</span></p></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="brand" href="index.html"><img src="img/santosha-sun.png" alt="">סנטושה</a>
+      <p style="margin-top:10px">יוגה בשיטת איינגר עם רותם פרג<br>שיעורי קבוצות, יוגה טיפולית ושיעורים פרטיים<br>קיבוץ דורות</p>
+    </div>
+    <ul><li><a href="index.html">בית</a></li><li><a href="classes.html">שיעורים והשיטה</a></li><li><a href="private.html">יוגה טיפולית ופרטית</a></li><li><a href="workshops.html">סדנאות ואירועים</a></li><li><a href="contact.html">צרו קשר</a></li></ul>
+    <ul>
+      <li>טלפון: <span class="ltr">052-4766124</span></li>
+      <li><a href="https://wa.me/972524766124">ווטסאפ</a></li>
+      <li><a href="https://www.google.com/maps/search/?api=1&query=%D7%A7%D7%99%D7%91%D7%95%D7%A5+%D7%93%D7%95%D7%A8%D7%95%D7%AA">איך מגיעים לקיבוץ דורות</a></li>
+    </ul>
+    <p class="credit">האתר נבנה על ידי רועי גרימברג · ליווי טכנולוגי ועסקי לעסקים קטנים</p>
+  </div>
+</footer>
+<script src="js/site.js"></script>
+</body>
+</html>
