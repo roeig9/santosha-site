@@ -1,3 +1,4 @@
+document.documentElement.classList.add("js");
 /* סנטושה – סקריפט משותף לכל העמודים */
 {
 /* ---- חיבור ל-Boostapp: מדביקים כאן את כתובת ה-Apps Script (/exec). ריק = מצב תצוגה, שום דבר לא נשלח. ---- */
@@ -154,3 +155,11 @@ document.querySelectorAll("form[data-form]").forEach(form => {
   });
 });
 }
+
+/* reveal sections as they scroll into view */
+(function(){
+  if(!("IntersectionObserver" in window))return;
+  var els=document.querySelectorAll("main > section:not(.hero):not(.pagehead) > .wrap");
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{rootMargin:"0px 0px -8% 0px",threshold:0.06});
+  els.forEach(function(el){el.classList.add("reveal");io.observe(el);});
+})();
