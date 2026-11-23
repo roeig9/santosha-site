@@ -239,3 +239,11 @@ footer .credit{grid-column:1/-1;border-top:1px solid #3a3a35;padding-top:16px;fo
 .rv-banner{position:sticky;bottom:0;z-index:30;background:var(--ink);color:#fff;padding:10px 16px;text-align:center;font-size:.95rem}
 .rv-btn{position:absolute;top:12px;inset-inline-end:max(12px,env(safe-area-inset-left,0px));z-index:5;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:8px 14px;border-radius:999px;background:#25D366;color:#fff;font:700 .95rem var(--font-body);text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.18)}
 .rv-on main>section,.rv-on footer{position:relative}
+
+/* read more */
+details.more summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:700;color:var(--sun-deep)}
+details.more summary::-webkit-details-marker{display:none}
+details.more summary::after{content:"";width:22px;height:22px;border-radius:50%;background:var(--tint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6' fill='none' stroke='%23171714' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/13px no-repeat;transition:transform .25s ease}
+details.more[open] summary::after{transform:rotate(180deg)}
+details.more[open] summary{margin-bottom:10px}
+details.more p+p{margin-top:14px}
