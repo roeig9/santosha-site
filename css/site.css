@@ -263,3 +263,4 @@ details.more p+p{margin-top:14px}
 .testi{position:relative;margin:0;padding:34px 24px 24px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 1px 0 rgba(0,0,0,.02)}
 .testi::before{content:"\201D";position:absolute;top:-6px;right:20px;font-family:Georgia,serif;font-size:4rem;line-height:1;color:var(--sun)}
 .testi p{color:var(--ink);line-height:1.75}
+.testi cite{display:block;margin-top:14px;font-style:normal;font-weight:700;color:var(--sun-deep)}
