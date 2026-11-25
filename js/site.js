@@ -6,7 +6,21 @@ const ENDPOINT = "";
 
 /* ---- סדנאות ואירועים: כדי להוסיף אירוע, מעתיקים בלוק ומעדכנים. אירועים שעברו נעלמים לבד.
    sample:true = דוגמה בלבד (מסומנת בעמוד). למחוק לפני העלייה לאוויר. ---- */
-const EVENTS = [];
+const EVENTS = [
+  {
+    id: "baby-yoga-dec-2026",
+    date: "2026-12-01",          // first meeting
+    until: "2026-12-01",         // registration open until the first meeting
+    time: "11:00–12:00",
+    title: "יוגה עם הבייבי: מרחב לנשים לאחר לידה",
+    text: "לנוע, לנשום, להסתגל, ומקום להרגיש שייכת. חיזוק רצפת האגן וזמן איכות ביחד עם הבייבי שלך. 5 מפגשים בימי שלישי: 1.12, 8.12, 15.12, 22.12, 29.12.",
+    place: "הסטודיו בקיבוץ דורות",
+    price: "420 ₪ לסדרה",
+    earlyPrice: "360 ₪ לסדרה",
+    earlyUntil: "2026-11-28",    // last day of early-bird price
+    spots: "מספר המקומות מוגבל"
+  }
+];
 
 const MONTHS = ["ינואר","פברואר","מרץ","אפריל","מאי","יוני","יולי","אוגוסט","ספטמבר","אוקטובר","נובמבר","דצמבר"];
 const DAYS = ["ראשון","שני","שלישי","רביעי","חמישי","שישי","שבת"];
@@ -49,7 +63,7 @@ const list = document.getElementById("events");
 if (list) {
   const today = new Date(); today.setHours(0, 0, 0, 0);
   const upcoming = EVENTS
-    .filter(e => new Date(e.date + "T00:00:00") >= today)
+    .filter(e => new Date((e.until || e.date) + "T00:00:00") >= today)
     .sort((a, b) => a.date.localeCompare(b.date));
   if (!upcoming.length) {
     list.innerHTML = '<div class="empty">כרגע אין סדנה פתוחה להרשמה. השאירו פרטים למטה, ונעדכן ראשונים כשתיפתח הבאה.</div>';
@@ -60,7 +74,7 @@ if (list) {
         <div class="date"><b>${d.getDate()}</b><span>${MONTHS[d.getMonth()]}</span><span>יום ${DAYS[d.getDay()]}</span></div>
         <div>
           <h3>${e.title}${e.sample ? '<span class="badge">דוגמה</span>' : ""}</h3>
-          <p class="meta"><span class="ltr">${e.time}</span> · ${e.place} · ${e.price} · ${e.spots}</p>
+          <p class="meta"><span class="ltr">${e.time}</span> · ${e.place} · ${priceOf(e, today)} · ${e.spots}</p>
           <p>${e.text}</p>
         </div>
         <a class="btn" href="#register" data-event="${e.id}">להרשמה</a>
@@ -73,6 +87,14 @@ if (list) {
       if (b && sel) sel.value = b.dataset.event;
     });
   }
+}
+
+function priceOf(e, today) {
+  if (e.earlyPrice && e.earlyUntil && new Date(e.earlyUntil + "T23:59:59") >= today) {
+    const d = new Date(e.earlyUntil + "T00:00:00");
+    return `${e.earlyPrice} בהרשמה מוקדמת עד ${d.getDate()}.${d.getMonth() + 1} (אחר כך ${e.price})`;
+  }
+  return e.price;
 }
 
 /* preselect a choice from the link, e.g. contact.html#private */
