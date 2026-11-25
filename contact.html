@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Assistant:wght@400;600;700&display=swap">
-<link rel="stylesheet" href="css/site.css?v=20261124b">
+<link rel="stylesheet" href="css/site.css?v=20261125a">
 </head>
 <body>
 <header class="top">
@@ -34,14 +34,16 @@
 <main>
 <section class="pagehead"><div class="wrap"><img src="img/santosha-sun.png" alt=""><div><h1>צרו קשר</h1><p>השאירו פרטים, ורותם תחזור אליכם לתאם את השיעור הראשון.</p></div></div></section>
 <section class="band">
-  <div class="wrap grid2" style="align-items:start;grid-template-columns:.8fr 1.2fr">
+  <div class="wrap grid2 contact-grid" style="align-items:start">
     <div class="prose">
       <ul class="contact-list">
         <li><b>טלפון</b><span class="ltr">052-4766124</span></li>
         <li><b>ווטסאפ</b><a href="https://wa.me/972524766124">שליחת הודעה לרותם</a></li>
-        <li><b>מיקום</b>קיבוץ דורות · <a href="https://www.google.com/maps/search/?api=1&query=%D7%A7%D7%99%D7%91%D7%95%D7%A5+%D7%93%D7%95%D7%A8%D7%95%D7%AA">פתיחה במפות</a></li>
+        <li><b>מיקום</b>הסטודיו בקיבוץ דורות</li>
         <li><b>שעות השיעורים</b>שני 18:15 ו-20:00 · רביעי 19:30 · שישי 8:30</li>
       </ul>
+      <div class="map"><iframe src="https://www.google.com/maps?q=31.5052582,34.6458678&amp;z=16&amp;output=embed" title="מפה: הסטודיו בקיבוץ דורות" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      <p class="nav-btns"><a class="btn small" href="https://waze.com/ul?ll=31.5052582,34.6458678&amp;navigate=yes" target="_blank" rel="noopener">ניווט ב־Waze</a><a class="btn small ghost" href="https://maps.app.goo.gl/7v7hyrJr1kVFq11A6" target="_blank" rel="noopener">ניווט ב־Google Maps</a></p>
       <p class="note">שיעור ניסיון עולה 50 ₪, והסכום מתקזז מהמנוי למי שממשיך.</p>
     </div>
     <div class="formbox">
@@ -50,7 +52,7 @@
   <div class="field"><label for="tName">שם מלא</label><input id="tName" name="fullName" type="text" autocomplete="name" required></div>
   <div class="field"><label for="tPhone">טלפון נייד</label><input id="tPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="050-0000000" required></div>
 </div>
-        <fieldset><span class="legend">מה מעניין אתכם?</span><div class="choices"><label class="choice"><input type="radio" name="classPref" id="c-mon1815" data-key="mon1815" value="שני 18:15–19:45 מתחילים/ממשיכים"><span><b>שני 18:15</b><small>מתחילים / ממשיכים</small></span></label><label class="choice"><input type="radio" name="classPref" id="c-mon2000" data-key="mon2000" value="שני 20:00–21:30 גב ומפרקים"><span><b>שני 20:00</b><small>גב ומפרקים</small></span></label><label class="choice"><input type="radio" name="classPref" id="c-wed1930" data-key="wed1930" value="רביעי 19:30–21:00 מתחילים/ממשיכים"><span><b>רביעי 19:30</b><small>מתחילים / ממשיכים</small></span></label><label class="choice"><input type="radio" name="classPref" id="c-fri0830" data-key="fri0830" value="שישי 8:30–10:00 לכל הרמות"><span><b>שישי 8:30</b><small>לכל הרמות</small></span></label><label class="choice"><input type="radio" name="classPref" id="c-private" data-key="private" value="טיפול יוגה פרטני"><span><b>יוגה טיפולית / שיעור פרטי</b><small>מפגש אישי</small></span></label><label class="choice"><input type="radio" name="classPref" id="c-unsure" data-key="unsure" value="עוד לא בטוח/ה"><span><b>עוד לא בטוחים</b><small>נחליט יחד</small></span></label></div></fieldset>
+        <fieldset><span class="legend">מה מעניין אתכם?</span><div class="choices"><label class="choice"><input type="radio" name="classPref" id="c-mon1815" data-key="mon1815" value="שני 18:15–19:45 מתחילים/ממשיכים"><span><b>שני 18:15</b><small>מתחילים / ממשיכים</small></span></label><label class="choice"><input type="radio" name="classPref" id="c-mon2000" data-key="mon2000" value="שני 20:00–21:30 גב ומפרקים"><span><b>שני 20:00</b><small>גב ומפרקים</small></span></label><label class="choice"><input type="radio" name="classPref" id="c-wed1930" data-key="wed1930" value="רביעי 19:30–21:00 מתחילים/ממשיכים"><span><b>רביעי 19:30</b><small>מתחילים / ממשיכים</small></span></label><label class="choice"><input type="radio" name="classPref" id="c-fri0830" data-key="fri0830" value="שישי 8:30–10:00 בוקר לכל הרמות"><span><b>שישי 8:30</b><small>בוקר לכל הרמות</small></span></label><label class="choice"><input type="radio" name="classPref" id="c-private" data-key="private" value="טיפול יוגה פרטני"><span><b>יוגה טיפולית / שיעור פרטי</b><small>מפגש אישי</small></span></label><label class="choice"><input type="radio" name="classPref" id="c-unsure" data-key="unsure" value="עוד לא בטוח/ה"><span><b>עוד לא בטוחים</b><small>נחליט יחד</small></span></label></div></fieldset>
         <div class="field"><label for="heardFrom">איך שמעתם על סנטושה?</label>
           <select id="heardFrom" name="heardFrom"><option value="">בחירה</option><option>חבר או חברה</option><option>קבוצת ווטסאפ</option><option>פייסבוק או אינסטגרם</option><option>חיפוש בגוגל</option><option>הפניה ממטפל/ת</option><option>פוסטר או מודעה</option><option>אחר</option></select></div>
         <div class="field"><label for="tRemarks">משהו שחשוב שרותם תדע? <span class="opt">(לא חובה)</span></label><textarea id="tRemarks" name="remarks" placeholder="למשל: כאבי גב, פציעה, הריון, שאלה על השיעורים"></textarea></div>
@@ -78,6 +80,6 @@
     <p class="credit">האתר נבנה על ידי רועי גרימברג · ליווי טכנולוגי ועסקי לעסקים קטנים</p>
   </div>
 </footer>
-<script src="js/site.js?v=20261124b"></script>
+<script src="js/site.js?v=20261125a"></script>
 </body>
 </html>
